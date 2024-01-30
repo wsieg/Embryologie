@@ -4,6 +4,8 @@
     background-color: #ffffff;
     padding: 20px;
     text-align: justify;
+    margin: 20px; /* Add margin to the entire container */
+    margin-bottom: 15px;
 }
 
 h1 {
@@ -14,4 +16,21 @@ p {
     width: 90%;
     margin: 0 auto;
     color: rgb(20, 20, 20);
+}
+.h5p-container {
+    height: 100vh;
+    overflow: hidden;
+}
+pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+img {
+    max-width: 80%; /* Set the maximum width to 100% of the container */
+    height: auto; /* Maintain the aspect ratio */
+    margin-bottom: 4cm;
+    display: block;
 }
