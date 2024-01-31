@@ -61,14 +61,17 @@
         <!-- H5P content containers -->
         <div class="h5p-container">
         <iframe src="https://wsieg.github.io/Embryologie/stades_embryo/h5p_content/fecondation.html" 
-        allowfullscreen style="border: none; width: 100%; height: 100%;"></iframe>
+        allowfullscreen scrolling="no" style="border: none; width: 100%; height: 100%;"></iframe>
         </div>
         <script>
             window.addEventListener('DOMContentLoaded', (event) => {
                 const iframe = document.querySelector('.h5p-container iframe');
                 if (iframe) {
                     iframe.onload = function () {
-                        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+                        const h5pContent = iframe.contentDocument.querySelector('.h5p-content');
+                        if (h5pContent) {
+                            iframe.style.height = h5pContent.scrollHeight + 'px';
+                        }
                     };
                 }
             });
