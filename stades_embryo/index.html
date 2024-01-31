@@ -63,6 +63,17 @@
         <iframe src="https://wsieg.github.io/Embryologie/stades_embryo/h5p_content/fecondation.html" 
         allowfullscreen style="border: none; width: 100%; height: 100%;"></iframe>
         </div>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                const iframe = document.querySelector('.h5p-container iframe');
+                if (iframe) {
+                    iframe.onload = function () {
+                        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+                    };
+                }
+            });
+        </script>
+        
         </body>
 
 
