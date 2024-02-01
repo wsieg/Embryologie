@@ -2,11 +2,10 @@
 
 
 h1 {
-    color: rgb(250, 2, 241);
+    color: rgb(28, 28, 28);
 }
 body {
-    margin: 0;
-    overflow: hidden;
+    margin: 10px;
 }
 /* Optional: Adjust the max-width to your desired value */
 iframe {
@@ -14,8 +13,9 @@ iframe {
     display: inline-block;
 }
 p {
-width: 90%;
+width: 100%;
 margin: 0 auto;
-color: rgb(78, 78, 78);
+color: rgb(75, 75, 75);
 text-align: justify;
+margin-bottom: 20px;
 }
