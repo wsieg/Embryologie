@@ -16,6 +16,7 @@ p {
     width: 90%;
     margin: 0 auto;
     color: rgb(20, 20, 20);
+    text-align: justify;
 }
 body {
     margin: 0;
@@ -37,8 +38,16 @@ body {
     margin-bottom: 600px;
 }
 img {
-    max-width: 20%; /* Set the maximum width to 100% of the container */
+    max-width: 60%; /* Set a specific maximum width */
     height: auto; /* Maintain the aspect ratio */
     margin-bottom: 4cm;
+    margin: 0 auto;
     display: block;
+}
+
+/* Media query for screens with a maximum width of 600px (adjust as needed) */
+@media screen and (max-width: 600px) {
+    img {
+        max-width: 100%; /* Set the maximum width to 100% for smaller screens */
+    }
 }
