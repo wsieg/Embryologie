@@ -28,3 +28,8 @@ img {
     display: inline-block;
     /* Add any other styles specific to the H5P iframe */
 }
+.video-iframe {
+    max-width: 75%;
+    display: inline-block;
+    /* Add any other styles specific to the video iframe */
+}
