@@ -19,3 +19,7 @@ color: rgb(75, 75, 75);
 text-align: justify;
 margin-bottom: 20px;
 }
+img {
+    max-width: 50%;
+    display: inline-block;
+}
