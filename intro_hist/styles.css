@@ -1,0 +1,24 @@
+/* styles.css */
+
+.styled-container {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: justify;
+}
+
+h1 {
+    color: rgb(65, 65, 65);
+}
+
+    /* Optional: Adjust the max-width to your desired value */
+    iframe {
+        max-width: 75%;
+        display: inline-block;
+    }
+    p {
+    width: 90%;
+    margin: 0 auto;
+    color: rgb(78, 78, 78);
+    text-align: justify;
+    }
+

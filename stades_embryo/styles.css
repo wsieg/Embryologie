@@ -7,14 +7,21 @@
     margin: 20px; /* Add margin to the entire container */
     margin-bottom: 15px;
 }
-
 h1 {
-    color: rgb(65, 65, 65);
+    color: rgb(250, 2, 241);
 }
-
-
 body {
     margin: 0;
     overflow: hidden;
 }
-
+/* Optional: Adjust the max-width to your desired value */
+iframe {
+    max-width: 75%;
+    display: inline-block;
+}
+p {
+width: 90%;
+margin: 0 auto;
+color: rgb(78, 78, 78);
+text-align: justify;
+}
