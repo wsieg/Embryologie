@@ -23,31 +23,3 @@ body {
     overflow: hidden;
 }
 
-.h5p-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 40vw;
-    height: 100vh;
-}
-
-.h5p-container iframe {
-    border: none;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 600px;
-}
-img {
-    max-width: 60%; /* Set a specific maximum width */
-    height: auto; /* Maintain the aspect ratio */
-    margin-bottom: 4cm;
-    margin: 0 auto;
-    display: block;
-}
-
-/* Media query for screens with a maximum width of 600px (adjust as needed) */
-@media screen and (max-width: 600px) {
-    img {
-        max-width: 100%; /* Set the maximum width to 100% for smaller screens */
-    }
-}
