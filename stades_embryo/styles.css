@@ -23,3 +23,8 @@ img {
     max-width: 50%;
     display: inline-block;
 }
+.h5p-iframe {
+    max-width: 95%; /* Adjust the max-width as needed */
+    display: inline-block;
+    /* Add any other styles specific to the H5P iframe */
+}
