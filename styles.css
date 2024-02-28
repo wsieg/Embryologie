@@ -16,7 +16,7 @@ p, ul, ol {
 width: 100%;
 margin: 0 auto;
 color: rgb(75, 75, 75);
-text-align: justify;
+text-align: left;
 margin-bottom: 20px;
 }
 img {
