@@ -40,7 +40,9 @@ figcaption{
 }
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
+    margin-top: 20px; /* Add space above the table */
+    margin-bottom: 20px; /* Add space below the table */
 }
 th, td {
     border: 1px solid black;
