@@ -60,3 +60,9 @@ ul.objectives {
     background-color: #c9ecfc; /* Choose a light background color for the rectangle */
     border-radius: 10px; /* Add border-radius to create rounded corners */
 }
+.video-iframe {
+    width: 50%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; /* Center the video horizontally */
+}
