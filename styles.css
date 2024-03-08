@@ -50,3 +50,13 @@ th, td {
 th {
     background-color: #f2f2f2;
 }
+ul.objectives {
+    width: 100%;
+    margin: 0 auto;
+    color: rgb(75, 75, 75);
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 20px; /* Add padding to create space between text and rectangle */
+    background-color: #c9ecfc; /* Choose a light background color for the rectangle */
+    border-radius: 10px; /* Add border-radius to create rounded corners */
+}
