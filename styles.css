@@ -58,8 +58,9 @@ ul.objectives {
     color: rgb(75, 75, 75);
     text-align: left; /* Align the text to the left */
     padding: 20px 20px 20px 0; /* Add padding to create space between text and rectangle */
-    background-color: #c9ecfc; /* Choose a light background color for the rectangle */
+    background-color: #f9ddf4; /* Choose a light background color for the rectangle */
     border-radius: 10px; /* Add border-radius to create rounded corners */
+    list-style-position: inside; /* Ensure bullets are inside the rectangle */
 }
 .video-iframe {
     width: 50%;
