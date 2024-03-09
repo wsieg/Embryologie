@@ -54,13 +54,14 @@ th {
 }
 ul.objectives {
     width: 90%;
-    margin: 0 auto 20px; /* Remove margin property and add bottom margin */
+    margin: 0; /* Remove margin property and add bottom margin */
     color: rgb(75, 75, 75);
     text-align: left; /* Align the text to the left */
-    padding: 20px 20px 20px 0; /* Add padding to create space between text and rectangle */
+    padding: 20px 20px 20px 20px; /* Add padding to create space between text and rectangle */
     background-color: #f9ddf4; /* Choose a light background color for the rectangle */
     border-radius: 10px; /* Add border-radius to create rounded corners */
     list-style-position: inside; /* Ensure bullets are inside the rectangle */
+    border: 2px solid #717171; /* Add border with desired color */
 }
 .video-iframe {
     width: 50%;
