@@ -23,9 +23,14 @@ img {
     max-width: 50%;
     display: inline-block;
 }
+ /* New CSS for full-width images */
+ .full-width {
+    max-width: 100%;
+    display: block;
+}
 figcaption{
     max-width: 50%;
-    display: inline-block;
+    display: block;
 }
 
 .h5p-iframe {
