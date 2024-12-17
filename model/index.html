@@ -19,11 +19,11 @@
         height: 100vh; /* Full viewport height */
       }
 
-      /* Responsive iframe container */
+      /* Iframe container with fixed height */
       .iframe-container {
         position: relative;
         width: 100%; /* Full width */
-        height: 100%; /* Dynamic height via JavaScript */
+        height: 600px; /* Set your desired height here */
         margin: auto;
         overflow: hidden;
       }
@@ -39,25 +39,11 @@
     </style>
   </head>
   <body>
-    <div class="iframe-container" id="iframe-container">
+    <div class="iframe-container">
       <iframe
         src="https://sn3d.unige.ch/instances/dip2024/?biUzRENvZXVyJTI2aWQlM0RtNHNjMmV2enpuanBqNGhieTUlMjZ2JTNEODA1"
         allowfullscreen>
       </iframe>
     </div>
-
-    <script>
-      // Adjust iframe height dynamically to fit the available window space
-      function adjustIframeHeight() {
-        const iframeContainer = document.getElementById('iframe-container');
-        iframeContainer.style.height = window.innerHeight + 'px';
-      }
-
-      // Set the height on page load
-      adjustIframeHeight();
-
-      // Update height if the window is resized
-      window.addEventListener('resize', adjustIframeHeight);
-    </script>
   </body>
 </html>
