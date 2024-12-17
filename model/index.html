@@ -1,70 +1,56 @@
 <!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Embed Test</title>
-    <style>
-      /* General Reset */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graasp Height Test</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      /* Iframe container styling */
-      .iframe-container {
-        position: relative;
-        width: 100%;
-        height: 100vh; /* Full viewport height as fallback */
-        max-height: none;
-        margin: auto;
-        overflow: hidden;
-      }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-      .iframe-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="iframe-container" id="iframe-container">
-      <iframe
-        src="https://sn3d.unige.ch/instances/dip2024/?biUzRENvZXVyJTI2aWQlM0RtNHNjMmV2enpuanBqNGhieTUlMjZ2JTNEODA1"
-        allowfullscreen>
-      </iframe>
-    </div>
+    .content {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-    <p>
-      
+    .spacer {
+      height: 2000px; /* Large height to test scrolling */
+      background: linear-gradient(to bottom, #ffdddd, #ddddff);
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>Graasp Height Test</h1>
+    <p>This is a minimal example to test dynamic height adjustment in Graasp.</p>
+    <div class="spacer"></div>
+    <p>End of content.</p>
+  </div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor accumsan erat, sed vehicula odio volutpat quis. Curabitur nunc arcu, elementum vel molestie nec, pellentesque vitae tellus. Etiam nec magna velit. Praesent ut consequat nisl, et blandit arcu. Vivamus blandit accumsan metus in ullamcorper. In vel luctus purus. Donec viverra nibh sit amet varius iaculis. Nam aliquet dolor eu sem tristique rutrum. Phasellus fringilla mollis purus a volutpat.
+  <script>
+    // Function to send the height of the content to the parent (Graasp)
+    function sendHeight() {
+      const height = document.body.scrollHeight; // Calculate total page height
+      window.parent.postMessage({ type: 'resize', height }, '*'); // Send message to parent
+    }
 
-Vivamus eget pellentesque nisl. Aliquam porttitor ipsum quis tortor scelerisque, in congue justo lobortis. Suspendisse vel est suscipit, vulputate erat et, laoreet dui. Aenean condimentum id orci a lobortis. Nam in volutpat erat. Duis ante nisi, tempus ut velit in, sollicitudin hendrerit elit. Fusce vitae quam enim.
+    // Send height on load
+    window.addEventListener('load', sendHeight);
 
-Maecenas tempor risus quis lectus porttitor aliquet. Donec aliquam, sem eget tincidunt lacinia, lacus metus aliquet justo, ac eleifend mauris sem ac est. Quisque vulputate pellentesque dapibus. Morbi congue sem at cursus egestas. Phasellus orci arcu, finibus eget tincidunt a, feugiat ut risus. Vivamus vitae tempus leo. Pellentesque mollis arcu a ipsum tincidunt tristique. Suspendisse condimentum in ante volutpat aliquam. Nullam at felis eu diam rutrum mattis sit amet ac metus. Aenean sit amet rutrum tellus. Mauris eget malesuada turpis. Cras nec felis enim.
-
-Proin dapibus orci ut turpis dignissim pretium. Nullam tortor diam, aliquet nec eros vitae, lacinia lobortis risus. Suspendisse dapibus elit vitae condimentum aliquam. Proin nec nibh lorem. Integer sed velit sit amet nunc posuere venenatis maximus non lacus. Vestibulum mi orci, egestas a lectus vel, lobortis vestibulum purus. Proin porta erat ut semper sagittis. Praesent imperdiet purus purus, vitae egestas quam rutrum sodales.
-
-Sed sodales libero ac lorem venenatis, ac aliquet velit efficitur. Cras neque nisi, volutpat non molestie a, pharetra sit amet risus. Nam ac velit luctus, interdum erat blandit, porta dui. Aliquam iaculis posuere nulla id semper. Nam pretium libero nec mauris porta, sed tincidunt augue convallis. Vivamus pellentesque urna at mauris malesuada, id congue massa sollicitudin. Vestibulum eget risus in diam porta faucibus. Maecenas sed odio vitae nunc condimentum laoreet eget id arcu. Aenean non vehicula mi, ut venenatis ipsum. Donec placerat nibh non odio faucibus, in venenatis metus interdum. Donec nec accumsan magna. Pellentesque tempus pulvinar mi, vitae ultrices felis tempor vitae. Fusce volutpat diam at finibus faucibus. Phasellus mattis vitae neque quis semper. Phasellus laoreet, nisi eu porttitor iaculis, est nibh dictum sem, sit amet pulvinar tellus mi at eros. Sed imperdiet id lorem nec interdum. 
-    </p>
-    <script>
-      // Function to communicate height to the parent (Graasp)
-      function sendHeight() {
-        const height = document.body.scrollHeight; // Get the total height of the content
-        window.parent.postMessage({ type: 'resize', height }, '*');
-      }
-
-      // Send height on load
-      window.addEventListener('load', sendHeight);
-
-      // Optionally, send height on resize if content changes dynamically
-      window.addEventListener('resize', sendHeight);
-    </script>
-  </body>
+    // Optional: Re-send height on window resize
+    window.addEventListener('resize', sendHeight);
+  </script>
+</body>
 </html>
