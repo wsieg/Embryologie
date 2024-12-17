@@ -3,20 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Embryologie</title>
-    <link rel="stylesheet" href="https://wsieg.github.io/Embryologie/styles.css" />
+    <title>Embed Test</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Body styling */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      /* Responsive iframe container */
+      .iframe-container {
+        position: relative;
+        width: 100%; /* Full width */
+        max-width: 1200px; /* Optional max width */
+        aspect-ratio: 16 / 9; /* Maintains aspect ratio */
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
   </head>
-
-
   <body>
-	<div class="iframe-container" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: auto;">
-    		<iframe 
-	        src="https://sn3d.unige.ch/instances/dip2024/?biUzRENvZXVyJTI2aWQlM0RtNHNjMmV2enpuanBqNGhieTUlMjZ2JTNEODA1" 
-	        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-	        frameborder="0" 
-	        allowfullscreen>
-    		</iframe>
-	</div>
-
-</body>
+    <div class="iframe-container">
+      <iframe
+        src="https://sn3d.unige.ch/instances/dip2024/?biUzRENvZXVyJTI2aWQlM0RtNHNjMmV2enpuanBqNGhieTUlMjZ2JTNEODA1"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </body>
 </html>
