@@ -1,68 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Responsive Content</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Reset and Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      width: 100%;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      padding: 16px;
-      line-height: 1.6;
-      overflow: auto; /* Allow scrolling if content exceeds iframe height */
-    }
-
-    h1 {
-      margin-bottom: 16px;
-    }
-
-    p {
-      margin-bottom: 8px;
-    }
-    html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden; /* Prevent scrollbars unless needed */
-}
-
-  </style>
+<title>Page Title</title>
 </head>
-<body>
-  <h1>This is a Heading</h1>
-  <p>This is a paragraph.</p>
 
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum interdum risus. Curabitur porttitor vestibulum dolor sit amet euismod. Cras auctor magna quis tincidunt viverra. Phasellus convallis, ante sit amet facilisis molestie, lacus ligula tincidunt mi, ac ullamcorper nulla quam ac turpis.
-  </p>
+<div class="FullScreen" style="height: 100%; width: 100%;">
+AHHHHHHHHHHHHAHAHAHAHAHAHHAHA Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fermentum interdum risus. Curabitur porttitor vestibulum dolor sit amet euismod. Cras auctor magna quis tincidunt viverra. Phasellus convallis, ante sit amet facilisis molestie, lacus ligula tincidunt mi, ac ullamcorper nulla quam ac turpis. Sed blandit enim a ultricies aliquam. Fusce venenatis vulputate tortor, id porttitor enim fermentum non. Maecenas maximus vehicula turpis.
 
-  <!-- Additional Content -->
-</body>
+Donec vehicula vulputate volutpat. Curabitur eros felis, rutrum eu est in, consectetur malesuada erat. Curabitur mollis, nisl id auctor pellentesque, nulla mauris semper tellus, eu fringilla dui enim ut nulla. Morbi non ullamcorper nisl, sed venenatis lorem. Vestibulum diam mauris, dictum in venenatis nec, tempor rutrum justo. Cras sollicitudin arcu vel bibendum placerat. Praesent quis ultricies justo. Mauris eget quam pellentesque, lacinia urna eu, luctus erat.
 
-  <script>
-  // Notify the parent iframe to adjust its height
-  function resizeIframe() {
-    const height = document.body.scrollHeight;
-    window.parent.postMessage({ type: 'resize', height }, '*');
-  }
+Donec sollicitudin interdum nisi vel aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tincidunt auctor ligula, at consectetur leo mollis id. Nunc a arcu imperdiet, bibendum leo in, sagittis magna. Aliquam dignissim, augue ac condimentum porta, tortor augue feugiat nisi, et bibendum felis erat ac mi. Aliquam non dolor quis justo euismod aliquam ut in quam. In sed tincidunt diam. Nullam sed consectetur leo, et gravida augue. Aliquam in molestie odio. Ut lacus enim, fermentum ut ante volutpat, rutrum pretium dolor. Fusce gravida ipsum ligula, sed gravida quam facilisis at. Aenean lacinia quis mauris eget ultricies.
 
-  // Resize on content load and any resize events
-  window.onload = resizeIframe;
-  window.onresize = resizeIframe;
-</script>
+Ut vulputate nulla nec nibh iaculis tincidunt. Ut non sapien quis lectus mattis sodales eu vitae nulla. Maecenas a quam a urna maximus aliquet. Suspendisse dui ante, congue non tellus et, finibus malesuada urna. Mauris porttitor ipsum urna, id placerat magna auctor sit amet. Phasellus a leo ultrices felis laoreet elementum. Donec feugiat tellus vitae volutpat tempor. Mauris gravida euismod ante. Mauris libero nisl, maximus eu leo vitae, luctus lacinia nulla.
+
+Mauris vulputate dignissim arcu, in sagittis est pharetra sed. Quisque egestas vehicula erat id eleifend. Nunc eget ipsum at nibh dictum facilisis ac quis arcu. Ut vel nibh non nisi tempus tempus. Vivamus fringilla mauris leo. Aenean pretium lectus nunc, eget tristique risus molestie nec. In eu scelerisque erat, ac efficitur nulla. Sed sed velit vitae lectus dictum dignissim at sed leo. Sed porttitor orci eu sapien fringilla auctor. Nunc vitae vehicula quam. 
+</div>
+
 
 </html>
