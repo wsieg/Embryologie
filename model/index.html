@@ -3,54 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Graasp Height Test</title>
+  <title>Graasp Full Height Test</title>
   <style>
-    /* General Reset */
+    /* Reset margins and padding */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background-color: #f9f9f9;
-      color: #333;
+    /* Force body and HTML to occupy full height */
+    html, body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden; /* Prevent extra scrolling */
     }
 
-    .content {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
+    .container {
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
     }
 
-    .spacer {
-      height: 2000px; /* Large height to test scrolling */
-      background: linear-gradient(to bottom, #ffdddd, #ddddff);
+    iframe {
+      width: 90%; /* Adjust as needed */
+      height: 90%; /* Almost full height */
+      border: none;
+      background-color: #fff;
     }
   </style>
 </head>
 <body>
-  <div class="content">
-    <h1>Graasp Height Test</h1>
-    <p>This is a minimal example to test dynamic height adjustment in Graasp.</p>
-    <div class="spacer"></div>
-    <p>End of content.</p>
+  <div class="container">
+    <iframe src="https://sn3d.unige.ch/instances/dip2024/?biUzRENvZXVyJTI2aWQlM0RtNHNjMmV2enpuanBqNGhieTUlMjZ2JTNEODA1"></iframe>
   </div>
-
-  <script>
-    // Function to send the height of the content to the parent (Graasp)
-    function sendHeight() {
-      const height = document.body.scrollHeight; // Calculate total page height
-      window.parent.postMessage({ type: 'resize', height }, '*'); // Send message to parent
-    }
-
-    // Send height on load
-    window.addEventListener('load', sendHeight);
-
-    // Optional: Re-send height on window resize
-    window.addEventListener('resize', sendHeight);
-  </script>
 </body>
 </html>
